@@ -1,0 +1,57 @@
+abstract class Animal {
+    public abstract void eat();
+    public abstract void sleep();
+}
+
+class Lion extends Animal {
+    @Override
+    public void eat() {
+        System.out.println("Lion eats meat.");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Lion sleeps for 8 hours.");
+    }
+}
+
+class Tiger extends Animal {
+    @Override
+    public void eat() {
+        System.out.println("Tiger eats meat.");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Tiger sleeps in the forest for 7 hours.");
+    }
+}
+
+class Deer extends Animal {
+    @Override
+    public void eat() {
+        System.out.println("Deer eats grass and plants.");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Deer sleeps lightly to stay alert for predators.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal lion = new Lion();
+        Animal tiger = new Tiger();
+        Animal deer = new Deer();
+
+        lion.eat();
+        lion.sleep();
+
+        tiger.eat();
+        tiger.sleep();
+
+        deer.eat();
+        deer.sleep();
+    }
+}
